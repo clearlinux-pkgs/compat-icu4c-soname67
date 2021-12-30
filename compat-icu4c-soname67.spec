@@ -6,7 +6,7 @@
 #
 Name     : compat-icu4c-soname67
 Version  : 67.1
-Release  : 26
+Release  : 27
 URL      : https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz
 Source0  : https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz
 Source1  : https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz.asc
@@ -61,7 +61,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1640903837
+export SOURCE_DATE_EPOCH=1640908175
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -83,7 +83,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 pushd source; make %{?_smp_mflags} check; popd
 
 %install
-export SOURCE_DATE_EPOCH=1640903837
+export SOURCE_DATE_EPOCH=1640908175
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/compat-icu4c-soname67
 cp %{_builddir}/icu/LICENSE %{buildroot}/usr/share/package-licenses/compat-icu4c-soname67/e38052bb1365b1f2475d83fc2683c04d91b0f5f4
